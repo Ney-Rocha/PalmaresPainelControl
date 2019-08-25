@@ -17,88 +17,112 @@
 </head>
 
 <body>
+    <!-- Conteúdo princial página -->
     <div id="wrapper">
-    <nav class="navbar-default navbar-static-side" role="navigation">
-        <div class="sidebar-collapse">
-            <ul class="nav metismenu" id="side-menu">
-                <li class="nav-header">
-                    <div class="dropdown profile-element"> 
-                        <h1 class="text-muted">Republica de Palmares</h1>
-                    </div>
-                    <div class="logo-element">
-                        RCP
-                    </div>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Aluno</span> <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="aluno.html">Criar</a></li>
-                        <li><a href="alunoLista.html">Editar</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-shield"></i> <span class="nav-label">Colaboradores</span> <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="colab.html">Criar</a></li>
-                        <li><a href="colabLista.html">Editar</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Doadores</span> <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="doador.html">Criar</a></li>
-                        <li><a href="doadorLista.html">Editar</a></li>
-                    </ul>
-                </li>
-                <!-- <li>
-                    <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label"></span></a>
-                </li> -->
-            </ul>
+        <!-- Menu lateral links de navegação -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> 
+                            <a href="homerestrita.html">
+                                <h1 class="text-muted">Republica de Palmares</h1>
+                            </a>
+                        </div>
+                        <div class="logo-element">
+                            RCP
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="cadastro.html">Criar</a></li>
+                            <li><a href="cadastroLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="modalidade.html">Criar</a></li>
+                            <li><a href="modalidadeLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="curso.html">Criar</a></li>
+                            <li><a href="cursoLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="doacao.html">Doar</a></li>
+                            <li><a href="doacaoLista.html">Ver</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="agenda.html">Criar</a></li>
+                            <li><a href="listaEvento">Editar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>  <!-- FIM - Menu lateral links de navegação -->
 
-        </div>
-    </nav>
-
+        <!-- Corpo conteudo -->
         <div id="page-wrapper" class="gray-bg">
+
+            <!-- Barra superior header da pagina -->
             <div class="row border-bottom">
+                
                 <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <!-- botão hamburguer de esconder/expandir mennu -->
                     <div class="navbar-header">
-                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>            
-                    </div>
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+                            <i class="fa fa-bars"></i>
+                         </a>            
+                    </div><!-- FIM -botão hamburguer de esconder/expandir mennu -->
+                    <!-- botão Sair do sitema -->
                     <ul class="nav navbar-top-links navbar-right">
-                        <!-- <li>
-                            <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
-                        </li> -->
                         <li>
                             <a href="index.html">
                                 <i class="fa fa-sign-out"></i> Sair
                             </a>
                         </li>
-                    </ul>
+                    </ul><!-- FIM - botão Sair do sitema -->
                 </nav>
-            </div>
-            <div class="wrapper wrapper-content animated fadeInRight">
+            </div> <!-- FIM - Barra superior header da pagina -->
+            
+            <div class="row border-bottom">
+            <!-- envelope do Conteúdo das views     -->
+                <div class="wrapper wrapper-content animated fadeInRight">
                 
-
-
-
-            </div>
-            <div class="footer">
-                <div class="pull-right">
-                    República de palmares <strong>2019</strong>.
+                    <!-- ESPAÇO CONTEUDO DA PAGINA -->
                 </div>
-                <div>
-                    <strong>Copyright</strong> Associação Cultural &copy;
-            </div>
-        </div>
-    </div>
+            </div> <!-- FIM - envelope do Conteúdo das views     -->
 
-    <!-- Mainly scripts -->
+            <!-- Rodapé -->
+            <div class="footer">
+                <strong>República Cultural </strong> &copy; - Copyright  
+                <div class="pull-right">
+                    Assossiação Cultural República de Palmares - 2019.
+                </div>
+            </div><!--FIM - Rodapé -->
+        </div><!--FIM Corpo conteudo -->
+    </div><!-- FIM - Conteúdo princial pagina -->
+
+    <!-- Principais scripts -->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-    <!-- Custom and plugin javascript -->
+    <!-- Customização da Página -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
 

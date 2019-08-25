@@ -3155,6 +3155,8 @@ body.tour-open .animated {
 /* Wizard step fix */
 .wizard > .content > .body {
   position: relative;
+  width: 100%;
+  height: 95%;
 }
 .sidebard-panel {
   width: 220px;
@@ -3361,14 +3363,14 @@ a:focus {
   border-right: 1px solid #e7eaec;
 }
 .hr-line-dashed {
-  border-top: 1px dashed #e7eaec;
+  border-top: 1px dashed #1bb394;
   color: #ffffff;
   background-color: #ffffff;
   height: 1px;
   margin: 20px 0;
 }
 .hr-line-solid {
-  border-bottom: 1px solid #e7eaec;
+  border-bottom: 1px solid #1bb394;
   background-color: rgba(0, 0, 0, 0);
   border-style: solid !important;
   margin-top: 15px;
@@ -8226,4 +8228,11 @@ body.md-skin {
   #page-wrapper {
     margin: 0;
   }
+}
+
+.d-flex-between{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
 }

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ONG Republica de palmares | Login </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- resposanvel por metodo wizard -->
+    <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    
+    <!-- date picker -->
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <!-- jasny -  mascara -->
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <!-- switchery -  mascara -->
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Conteúdo princial página -->
+    <div id="wrapper">
+        <!-- Menu lateral links de navegação -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> 
+                            <a href="homerestrita.html">
+                                <h1 class="text-muted">Republica de Palmares</h1>
+                            </a>
+                        </div>
+                        <div class="logo-element">
+                            RCP
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="cadastro.html">Criar</a></li>
+                            <li><a href="cadastroLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="modalidade.html">Criar</a></li>
+                            <li><a href="modalidadeLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="curso.html">Criar</a></li>
+                            <li><a href="cursoLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="doacao.html">Doar</a></li>
+                            <li><a href="doacaoLista.html">Ver</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="agenda.html">Criar</a></li>
+                            <li><a href="listaEvento">Editar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>  <!-- FIM - Menu lateral links de navegação -->
+
+        <!-- Corpo conteudo -->
+        <div id="page-wrapper" class="gray-bg">
+
+            <!-- Barra superior header da pagina -->
+            <div class="row border-bottom">
+                
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <!-- botão hamburguer de esconder/expandir mennu -->
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+                            <i class="fa fa-bars"></i>
+                         </a>            
+                    </div><!-- FIM -botão hamburguer de esconder/expandir mennu -->
+                    <!-- botão Sair do sitema -->
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-sign-out"></i> Sair
+                            </a>
+                        </li>
+                    </ul><!-- FIM - botão Sair do sitema -->
+                </nav>
+            </div> <!-- FIM - Barra superior header da pagina -->
+            
+            <div class="row border-bottom">
+            <!-- envelope do Conteúdo das views     -->
+                <div class="wrapper wrapper-content animated fadeInRight">
+                
+                        <div class="ibox-content m-b-lg">
+                                <h2>
+                                   Cadastro de Pessoas
+                                </h2>
+                                
+                                <!-- formulario de cadastro método Wizard -->
+                                <form id="form" action="#" class="wizard-big">
+                                    <h1>Informações Básicas</h1>
+                                    <!-- dados básico -->
+                                    <fieldset>
+                                        <h3 class="font-bold text-uppercase text-center">Informações cadastrais</h3>
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="label-control" for="cpf_cadastro">CPF</label>
+                                                    <input type="text" placeholder="Ex. 99.999.999-99" class="form-control cpfCnpj" id="cpf_cadastro" name="cpf_cadastro" required >
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="label-control" for="tipoPessoa_cadastro">Tipo Pessoa</label>
+                                                        <select class="form-control m-b" id="tipoPessoa_cadastro" name="tipoPessoa_cadastro" required >
+                                                            <option value="">Selecione</option>
+                                                            <option value="1">Pessoa Fisíca</option>
+                                                            <option value="2">Pessoa Juridíca</option>
+                                                        </select> 
+                                                    </div>
+                                                </div>
+                                            
+                                            <div class="col-sm-12">
+                                                <div class="form-group" required>
+                                                    <label class="label-control" for="nome_cadastro">Nome</label>
+                                                    <input type="text" placeholder="Ex. João da Silva" class="form-control " id="nome_cadastro" name="nome_cadastro" required >
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-6">
+                                                <div class="form-group" id="data_1">
+                                                    <label class="label-control" for="dt_nascimento">Nascimento</label>
+                                                    <div class="input-group date" >
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="01/01/1900" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="label-control" for="sexo_cadastro">Gênero</label>
+                                                    <select class="form-control m-b"name="sexo_cadastro" id="sexo_cadastro" required>
+                                                        <option value="">Selecione</option>
+                                                        <option value="1">Masculino</option>
+                                                        <option value="2">Feminino</option>
+                                                        <option value="3">Indefinido</option>
+                                                    </select>                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset> <!-- FIM - dados básico -->
+
+                                    <!-- Dados de contato -->
+                                    <h1>Informações de Contato</h1>
+                                    <fieldset>
+                                        <h3 class="font-bold text-uppercase text-center">Endereço</h3>
+                                        <div class="row m-b-sm">
+                                            <div class="col-sm-10">
+                                                <div class="form-group">
+                                                    <label for="endereco_cadastro" class="label-control">Logradouro</label>
+                                                    <input type="text" placeholder="Ex. Rua: Joao da Silva" id="endereco_cadastro" name="endereco_cadastro" class="form-control" name="logradouro">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                    <label for="numero_cadastro" class="label-control">Número</label>
+                                                    <input type="text" placeholder="Nº" id="999" name="Ex. numero_cadastro" class="form-control">
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="complemento_cadastro" class="label-control">Complemento</label>
+                                                    <input type="text" id="complemento_cadastro" placeholder="Ex. Ap 10" class="form-control" name="complemento_cadastro">
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="numero_cadastro" class="label-control">Bairro</label>
+                                                    <input type="text" id="numero_cadastro" name="numero_cadastro" placeholder="Ex. Centro" class="form-control" name="bairro">
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="cidade_cadastro" class="label-control">Cidade</label>
+                                                    <input type="text" id="cidade_cadastro" name="cidade_cadastro" placeholder="Ex. São Paulo" class="form-control" name="cidade">
+                                                </div>
+                                            </div>
+                                            
+
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="cep_cadastro" class="label-control">CEP</label>
+                                                    <input type="text" id="cep_cadastro" data-mask="99999-999" placeholder="Ex. 00000-000" class="form-control" max-length="9" name="cep_cadastro">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="uf_cadastro" class="label-control">UF</label>
+                                                    <select class="form-control  m-b " id="uf_cadastro" name="uf_cadastro"name="uf">
+                                                        <option value="">Escolha</option>
+                                                        <option value="AC">Acre</option>
+                                                        <option value="AL">Alagoas</option>
+                                                        <option value="AP">Amapá</option>
+                                                        <option value="AM">Amazonas</option>
+                                                        <option value="BA">Bahia</option>
+                                                        <option value="CE">Ceará</option>
+                                                        <option value="DF">Distrito Federal</option>
+                                                        <option value="ES">Espírito Santo</option>
+                                                        <option value="GO">Goiás</option>
+                                                        <option value="MA">Maranhão</option>
+                                                        <option value="MT">Mato Grosso</option>
+                                                        <option value="MS">Mato Grosso do Sul</option>
+                                                        <option value="MG">Minas Gerais</option>
+                                                        <option value="PA">Pará</option>
+                                                        <option value="PB">Paraíba</option>
+                                                        <option value="PR">Paraná</option>
+                                                        <option value="PE">Pernambuco</option>
+                                                        <option value="PI">Piauí</option>
+                                                        <option value="RJ">Rio de Janeiro</option>
+                                                        <option value="RN">Rio Grande do Norte</option>
+                                                        <option value="RS">Rio Grande do Sul</option>
+                                                        <option value="RO">Rondônia</option>
+                                                        <option value="RR">Roraima</option>
+                                                        <option value="SC">Santa Catarina</option>
+                                                        <option value="SP">São Paulo</option>
+                                                        <option value="SE">Sergipe</option>
+                                                        <option value="TO">Tocantins</option>
+                                                        <option value="EX">Estrangeiro</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hr-line-dashed"></div>
+                                        <h3 class="font-bold text-uppercase text-center">Telefone</h3>
+                                        <div class="row m-b-sm ">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="telefone1_cadastro">Telefone 1</label>
+                                                    <input type="text" placeholder="Ex. (11) 9999-9999" class="form-control celphones" id="telefone1_cadastro" name="telefone1_cadastro">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="telefone2_cadastro">Telefone 2</label>
+                                                    <input type="text" placeholder="Ex. (11) 9999-9999" class="form-control celphones" id="telefone2_cadastro" name="telefone2_cadastro">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hr-line-dashed"></div>
+                                        <h3 class="font-bold text-uppercase text-center">Email</h3>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="email_cadastro">Email</label>
+                                                    <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="email_cadastro" name="email_cadastro" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset><!-- FIM - dados de contato -->
+    
+                                    <h1>Acessos</h1>
+                                    <fieldset>
+                                        <div class="row m-b-md">
+                                            <h3 class="font-bold text-uppercase text-center m-b-md">Permissões de acesso</h3>
+                                            <div class="col-sm-4">
+                                                
+                                                <label for="aluno_cadastro">Aluno</label>
+                                                <input type="checkbox" id="aluno_cadastro" name="aluno_cadastro" class="js-switch" checked />
+                                                
+                                            </div> 
+
+                                            <div class="col-sm-4">
+                                                <label for="colaborador_cadastro">Colaborador</label>
+                                                <input type="checkbox" id="colaborador_cadastro" name="colaborador_cadastro" class="js-switch_2"/>
+                                                
+                                            </div> 
+
+                                            <div class="col-sm-4">
+                                                <label for="doador_cadastro">Doador</label>
+                                                <input type="checkbox" id="doador_cadastro" name="doador_cadastro" class="js-switch_3" checked />
+                                                
+                                            </div> 
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="hr-line-dashed"></div>
+                                            <h3 class="font-bold text-uppercase text-center">Usúario de acesso</h3>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="email_cadastro">Email</label>
+                                                    <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="email_cadastro" name="email_cadastro" required>
+                                                </div>
+                                            </div> 
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="Senha_cadastro">Senha</label>
+                                                    <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="eSenha_cadastro" name="Senha_cadastro" required>
+                                                </div>
+                                            </div> 
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="ConfSenha_cadastro">Senha</label>
+                                                    <input type="password" placeholder="Repita a senha" class="form-control"  id="ConfSenha" name="ConfSenha" required>
+                                                </div>
+                                            </div> 
+
+                                        </div>
+                                    </fieldset>
+    
+                                    <h1>Revisão</h1>
+                                    <fieldset>
+                                        <h2>Terms and Conditions</h2>
+                                        <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                    </fieldset>
+
+                                    <h1>Finalizar</h1>
+                                    <fieldset>
+                                        <h2>Terms and Conditions</h2>
+                                        <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                    </fieldset>
+                                </form>
+                            </div>
+
+
+                    <!-- ESPAÇO CONTEUDO DA PAGINA -->
+                </div>
+            </div> <!-- FIM - envelope do Conteúdo das views     -->
+
+            <!-- Rodapé -->
+            <div class="footer">
+                <strong>República Cultural </strong> &copy; - Copyright  
+                <div class="pull-right">
+                    Assossiação Cultural República de Palmares - 2019.
+                </div>
+            </div><!--FIM - Rodapé -->
+        </div><!--FIM Corpo conteudo -->
+    </div><!-- FIM - Conteúdo princial pagina -->
+
+    <!-- Principais scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Customização da Página -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Switchery -->
+   <script src="js/plugins/switchery/switchery.js"></script>
+
+    <!-- Steps -->
+    <script src="js/plugins/staps/jquery.steps.min.js"></script>
+
+    
+   <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+   
+    <!-- Jquery Validate -->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/pages/cadastro.js"></script>
+    <script src="js/plugins/jqmask/jquery_mask.js"></script>
+    <script src="js/pages/validator.js"></script>
+
+    
+
+</body>
+</html>

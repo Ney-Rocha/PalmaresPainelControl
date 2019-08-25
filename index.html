@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>INSPINIA - Landing Page</title>
+    <title>Republica Cultural de Palmares</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -15,6 +15,8 @@
     <!-- Animation CSS -->
     <link href="css/animate.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css">
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -31,17 +33,17 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        WEBAPPLAYERS
+                        WEBAPPLAYERS 
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="page-scroll" href="#page-top">Home</a></li>
-                        <li><a class="page-scroll" href="#features">Features</a></li>
-                        <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
-                        <li><a class="page-scroll" href="#teste">Testimonialsteste</a></li>
-                        <li><a class="page-scroll" href="#contact">Contact</a></li>
-                        <li><a class="" href="login.html">Login</a></li>
+                        <li><a class="page-scroll" href="#features">Sobre Nós</a></li>
+                        <li><a class="page-scroll" href="#testimonials">Testemunhos</a></li>
+                        <li><a class="page-scroll" href="#teste">Programas</a></li>
+                        <li><a class="page-scroll" href="#contact">Fale Consoco</a></li>
+                        <li><a class="" href="login.html">Entrar</a></li>
                     </ul>
                 </div>
             </div>
@@ -213,7 +215,6 @@
 </section>
 
 
-
 <section id="testimonials" class="navy-section testimonials" style="margin-top: 0">
 
     <div class="container">
@@ -295,9 +296,6 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 
@@ -344,14 +342,77 @@
 
 </section>
 
-
+<!-- seção fale conosco -->
 <section id="contact" class="gray-section contact">
     <div class="container">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>Contact Us</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                <h1>Fale conosco</h1>
+                <p>Para maiores informações sobre nossos curso, eventos ou mesmo para ser um doador fale consoco preenchendo devidamente os campos abaixo.</p>
+                <form action="" id="fale-conosco">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="nome_Interessado" class="label-control pull-left">
+                                        Nome
+                                    </label>
+                                    <input id="nome_Interessado" type="text"  name="nome_Interessado" class="form-control" required placeholder="Ex: joao da silva">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telefone_Interessado" class="label-control pull-left ">
+                                        Telefone
+                                    </label>
+                                    <input type="tel" id="telefone_Interessado" name="telefone_Interessado"  required class="form-control celphones" placeholder="Ex: (99)99999-9999" >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email_Interessado" class="label-control pull-left">
+                                        E-mail
+                                    </label>
+                                    <input type="email" id="email_Interessado" name="email_Interessado"  required class="form-control" placeholder="Ex: joao@silva.com">
+                                </div>
+
+                                <div class="form-group ">
+                                    <h3 class="text-navy">
+                                        Assuntos de Interesse
+                                    </h3>
+                                    <div class="d-flex-between">
+                                        <div class="checkbox checkbox-inline checkbox-info">
+                                            <input type="checkbox" name="interesse" id="interesse_Aula">
+                                            <label for="interesse_Aula"><strong class="text-uppercase">Aulas</strong></label>
+                                        </div>
+    
+                                        <div class="checkbox checkbox-inline checkbox-info">
+                                            <input type="checkbox" name="interesse" id="interesse_Colaborador">
+                                            <label for="interesse_Colaborador">
+                                                <strong class="text-uppercase">Colaboradores</strong>
+                                            </label>
+                                        </div>
+    
+                                        <div class="checkbox checkbox-inline checkbox-info">
+                                            <input type="checkbox" name="interesse" id="interesse_Doador">
+                                            <label for="interesse_Doador">
+                                                <strong class="text-uppercase">Doação</strong>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea id="texto_Interessado" name="mensagem_Interessado" cols="30" rows="12" required placeholder="Escreva seu texto aqui" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button id="enviar-form" type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="row m-b-lg">
@@ -371,9 +432,9 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+               
                 <p class="m-t-sm">
-                    Or follow us on social platform
+                    Siga-nos em nossas redes sociais
                 </p>
                 <ul class="list-inline social-icon">
                     <li><a href="#"><i class="fa fa-twitter"></i></a>
@@ -387,7 +448,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2015 Company Name</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <p><strong>&copy; 2019 Associação Cultural republica de Palmares</strong><br/> Uma organização sem fins Lucrativos.</p>
             </div>
         </div>
     </div>
@@ -404,61 +465,12 @@
 <script src="js/plugins/pace/pace.min.js"></script>
 <script src="js/plugins/wow/wow.min.js"></script>
 
+<script src="js/plugins/validate/jquery.validate.min.js"></script>
+<!-- <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script> -->
 
-<script>
-
-    $(document).ready(function () {
-
-        $('body').scrollspy({
-            target: '.navbar-fixed-top',
-            offset: 0
-        });
-
-        // Page scrolling feature
-        $('a.page-scroll').bind('click', function(event) {
-            var link = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(link.attr('href')).offset().top - 50
-            }, 500);
-            event.preventDefault();
-            $("#navbar").collapse('hide');
-        });
-    });
-
-    var cbpAnimatedHeader = (function() {
-        var docElem = document.documentElement,
-                header = document.querySelector( '.navbar-default' ),
-                didScroll = false,
-                changeHeaderOn = 200;
-        function init() {
-            window.addEventListener( 'scroll', function( event ) {
-                if( !didScroll ) {
-                    didScroll = true;
-                    setTimeout( scrollPage, 250 );
-                }
-            }, false );
-        }
-        function scrollPage() {
-            var sy = scrollY();
-            if ( sy >= changeHeaderOn ) {
-                $(header).addClass('navbar-scroll')
-            }
-            else {
-                $(header).removeClass('navbar-scroll')
-            }
-            didScroll = false;
-        }
-        function scrollY() {
-            return window.pageYOffset || docElem.scrollTop;
-        }
-        init();
-
-    })();
-
-    // Activate WOW.js plugin for animation on scrol
-    new WOW().init();
-
-</script>
+<script src="js/pages/index.js"></script>
+<script src="js/plugins/jqmask/jquery_mask.js"></script>
+<script src="js/pages/validator.js"></script>
 
 </body>
 </html>
