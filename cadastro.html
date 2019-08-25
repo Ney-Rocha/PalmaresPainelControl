@@ -290,7 +290,7 @@
                                         </div>
                                     </fieldset><!-- FIM - dados de contato -->
     
-                                    <h1>Acessos</h1>
+                                    <h1>Informações de Acessos</h1>
                                     <fieldset>
                                         <div class="row m-b-md">
                                             <h3 class="font-bold text-uppercase text-center m-b-md">Permissões de acesso</h3>
@@ -316,40 +316,109 @@
                                         </div>
                                         <div class="row">
                                             <div class="hr-line-dashed"></div>
-                                            <h3 class="font-bold text-uppercase text-center">Usúario de acesso</h3>
+                                            <h3 class="font-bold text-uppercase text-center">Participação em Cursos</h3>
+
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="label-control" for="modalidade_cadastro">Modalidade</label>
+                                                    <select class="form-control m-b"name="modalidade_cadastro" id="modalidade_cadastro" required>
+                                                        <option value="">Selecione</option>
+                                                        <option value="1">Arte Marcial</option>
+                                                        <option value="2">Artesanato</option>
+                                                        <option value="3">Teatro</option>
+                                                        <option value="4">Música</option>
+                                                    </select>                                                   
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="label-control" for="curso_cadastro">Curso</label>
+                                                    <select class="form-control m-b"name="curso_cadastro" id="curso_cadastro" required>
+                                                        <option value="">Selecione</option>
+                                                        <option value="1">Capoeira</option>
+                                                    </select>                                                   
+                                                </div>
+                                            </div>
+                                            
+
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label class="label-control" for="graduacao_cadastro">Graduação</label>
+                                                    <select class="form-control m-b"name="graduacao_cadastro" id="graduacao_cadastro" required>
+                                                        <option value="">Selecione</option>
+                                                        <option value="1">Iniciante</option>
+                                                        <option value="1">Cordão Verde</option>
+                                                        <option value="1">Cordão Verde-amarelo</option>
+                                                    </select>                                                   
+                                                </div>
+                                            </div>
+
                                             <div class="col-sm-12">
+                                                <div class="text-center m-b-md m-t-sm">
+                                                    <button class="btn btn-sm btn-primary" type="button" value="Adicionar">Adicionar</button>
+                                                </div>
+                                            </div>
+    
+
+                                            <!-- tabela de cursos que o individuo pertence -->
+                                            <div class="col-sm-12">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered table-hover lista_cadastros" >
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center">Modalidade</th>
+                                                                <th class="text-center">Curso</th>
+                                                                <th class="text-center">Graduação/Nível</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="gradeX">
+                                                                <td>Artes Marciais</td>
+                                                                <td>
+                                                                    Capoeira
+                                                                </td>
+                                                                <td>
+                                                                    Cardão verde
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div> <!--Fim da tabela-->  
+                                        </div>
+                                        <div class="row">
+                                            <div class="hr-line-dashed"></div>
+                                            <h3 class="font-bold text-uppercase text-center">Usúario de acesso</h3>
+                                            <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label for="email_cadastro">Email</label>
                                                     <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="email_cadastro" name="email_cadastro" required>
                                                 </div>
                                             </div> 
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label for="Senha_cadastro">Senha</label>
                                                     <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="eSenha_cadastro" name="Senha_cadastro" required>
                                                 </div>
                                             </div> 
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label for="ConfSenha_cadastro">Senha</label>
-                                                    <input type="password" placeholder="Repita a senha" class="form-control"  id="ConfSenha" name="ConfSenha" required>
+                                                    <input type="password" placeholder="Confirme sua senha" class="form-control"  id="ConfSenha" name="ConfSenha" required>
                                                 </div>
                                             </div> 
 
                                         </div>
                                     </fieldset>
     
-                                    <h1>Revisão</h1>
-                                    <fieldset>
-                                        <h2>Terms and Conditions</h2>
-                                        <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
-                                    </fieldset>
-
                                     <h1>Finalizar</h1>
                                     <fieldset>
                                         <h2>Terms and Conditions</h2>
-                                        <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                        <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">Salvar informações.</label>
                                     </fieldset>
+                                    
                                 </form>
                             </div>
 

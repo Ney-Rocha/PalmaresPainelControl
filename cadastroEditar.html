@@ -23,56 +23,51 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> 
-                            <h1 class="text-muted">Republica de Palmares</h1>
+                            <a href="homerestrita.html">
+                                <h1 class="text-muted">Republica de Palmares</h1>
+                            </a>
                         </div>
                         <div class="logo-element">
                             RCP
                         </div>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Pessoa</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="aluno.html">Criar</a></li>
-                            <li><a href="alunoLista.html">Editar</a></li>
+                            <li><a href="cadastro.html">Criar</a></li>
+                            <li><a href="cadastroLista.html">Editar</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="colab.html">Criar</a></li>
-                            <li><a href="colabLista.html">Editar</a></li>
+                            <li><a href="modalidade.html">Criar</a></li>
+                            <li><a href="modalidadeLista.html">Editar</a></li>
                         </ul>
                     </li>
                     
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="doador.html">Criar</a></li>
-                            <li><a href="doadorLista.html">Editar</a></li>
+                            <li><a href="curso.html">Criar</a></li>
+                            <li><a href="cursoLista.html">Editar</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="doador.html">Doar</a></li>
-                            <li><a href="#">Verificar</a></li>
-                            <li><a href="#">Ver</a></li>
+                            <li><a href="doacao.html">Doar</a></li>
+                            <li><a href="doacaoLista.html">Ver</a></li>
                             
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="doador.html">Criar</a></li>
-                            <li><a href="#">Editar</a></li>
-                            <li><a href="#">Ver</a></li>
-                            
+                            <li><a href="agenda.html">Criar</a></li>
+                            <li><a href="listaEvento">Editar</a></li>
                         </ul>
                     </li>
-                    
-                    <!-- <li>
-                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label"> Agenda</span></a>
-                    </li> -->
                 </ul>
             </div>
         </nav>
@@ -95,17 +90,21 @@
                 </nav>
             </div>
             
-            <div class="wrapper wrapper-content animated fadeInRight">                
+            <div class="wrapper wrapper-content animated fadeInRight"> 
+                
+                
+                
                 <div class="wrapper wrapper-content animated fadeInRight">
                     <div class="row">
+                            
                         <div class="tabs-container">
-                            <!-- <ul class="nav nav-tabs">
+                            <ul class="nav nav-tabs">
                                 <li class="active" ><a data-toggle="tab" href="#tab-1"> Cadastro</a></li>
                                 <li class="{{}} "><a data-toggle="tab" href="#tab-2">Modalidade</a></li>
                                 <li class=" "><a data-toggle="tab" href="#tab-3">Curso</a></li>
                                 <li class=""><a data-toggle="tab" href="#tab-4">Doação</a></li>
                                 <li class=""><a data-toggle="tab" href="#tab-4">Agenda</a></li>
-                            </ul> -->
+                            </ul>
                             <div class="tab-content">
                                 <div id="tab-1" class="">
                                     <div class="panel-body">
@@ -117,29 +116,42 @@
                                             <form role="form" action="#" method="#">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label>CPF</label>
-                                                        <input type="text" placeholder="Preencha com o CPF" class="form-control" name="cpf" required>
+                                                        <label for="documento_editar" class="label-control">CPF</label>
+                                                        <input type="text" placeholder="Preencha com o CPF" class="form-control" id="documento_editar" name="documento_editar" required>
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label>Nome</label>
-                                                        <input type="text" placeholder="Prenche com o nome" class="form-control" name="nome" required>
+                                                        <label for="tiposoc_editar" class="label-control">Tipo Pesooa</label>
+                                                        <select class="form-control m-b" name="tiposoc_editar" id="tiposoc_editar">
+                                                            <option value="">Selecione</option>
+                                                            <option value="0">Pessoa Fisíca</option>
+                                                            <option value="1">Pessoas Juridíca</option>
+                                                        </select> 
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="nome_editar" class="label-control">Nome</label>
+                                                        <input type="text" placeholder="Prencher com o nome" class="form-control" name="nome_editar" id="nome_editar" required>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-6">
+                                                    <div class="form-group" id="data_1">
+                                                        <label class="label-control" for="dt_nascimento">Nascimento</label>
+                                                        <div class="input-group date" >
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="01/01/1900" >
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label>Data de Nascimento</label>
-                                                        <input type="date" class="form-control" name="dataNasc">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>Gênero</label>
-                                                        <select class="form-control m-b" name="account" name="sexo">
+                                                        <label for="genero_editar" class="label-control">Gênero</label>
+                                                        <select class="form-control m-b" name="name_editar" id="name-editar">
                                                             <option value="0">Masculino</option>
                                                             <option value="1">Feminino</option>
                                                         </select>                                                   
@@ -274,9 +286,21 @@
                 <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
                 <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
                 
-                <!-- Custom and plugin javascript -->
-                <script src="js/inspinia.js"></script>
-                <script src="js/plugins/pace/pace.min.js"></script>
+                 <!-- Custom and plugin javascript -->
+                 <script src="js/inspinia.js"></script>
+                 <script src="js/plugins/pace/pace.min.js"></script>
+
+                  
+                <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+                
+                <!-- Jquery Validate -->
+                <script src="js/plugins/validate/jquery.validate.min.js"></script>
+                <script src="js/plugins/jqmask/jquery_mask.js"></script>
+                <script src="js/pages/validator.js"></script>
+
+   
+                
+               
                 <script>
                     $(document).ready(function(){
                         var senha = $('#senha');
