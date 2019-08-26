@@ -353,8 +353,13 @@
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
                 <h1>Fale conosco</h1>
+<<<<<<< HEAD
                 <p> Organização Não governamental sem fins lucrativos, tem como objetivo transmitir a memória cultural de nossa história, através das mais diversas expressões culturais, saiba mais sobre nosso trabalho, fale conosco.</p>
                 <form action="cadInteressado" id="fale-conosco" method="POST">
+=======
+                <p>Para maiores informações sobre nossos curso, eventos ou mesmo para ser um doador fale consoco preenchendo devidamente os campos abaixo.</p>
+                <form action="interessado.php" id="fale-conosco" method="POST">
+>>>>>>> 3aab830fd82867db7f68826a0b5322e9fdfcb3fe
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">
@@ -385,19 +390,19 @@
                                     </h3>
                                     <div class="d-flex-between">
                                         <div class="checkbox checkbox-inline checkbox-info">
-                                            <input type="checkbox" name="interesse" id="interesse_Aula" value="1">
+                                            <input type="checkbox" name="interesse[]" id="interesse_Aula" value="1">
                                             <label for="interesse_Aula"><strong class="text-uppercase">Aluno</strong></label>
                                         </div>
     
                                         <div class="checkbox checkbox-inline checkbox-info">
-                                            <input type="checkbox" name="interesse" id="interesse_Colaborador" value="2">
+                                            <input type="checkbox" name="interesse[]" id="interesse_Colaborador" value="2">
                                             <label for="interesse_Colaborador">
                                                 <strong class="text-uppercase">Colaboradores</strong>
                                             </label>
                                         </div>
     
                                         <div class="checkbox checkbox-inline checkbox-info">
-                                            <input type="checkbox" name="interesse" id="interesse_Doador" value="3">
+                                            <input type="checkbox" name="interesse[]" id="interesse_Doador" value="3">
                                             <label for="interesse_Doador">
                                                 <strong class="text-uppercase">Doação</strong>
                                             </label>

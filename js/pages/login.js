@@ -11,31 +11,24 @@ $('#btn-login').on('click', function(e){
         }
     });//fecha seleção do form	
     
-    $('#btn-login').on('click', function(){
-		
-        var usuarioGuardado = localStorage.getItem('user');
-        var senhaGuardada = localStorage.getItem('pass');
-        
-        if( $('#usuario-login').val() === usuarioGuardado &&
-         $('#senha-login').val() === senhaGuardada ){
-            return true;
-        } else {
-            swal({
-                title: "Usuário invalido!",
-                text: "Verifique o Usuário e Senha Informado",
-                type: "error",
-                timer: 4000,        
-                allowOutsideClick: true,
-                showCancelButton: true,
-                showConfirmButton: false,
-                allowEscapeKey: true,
-                html: true
-                
-            })
-            return false;
-        }	
-    });
+    
 });
+
+//swal alert para caso não encontre usuario no banco
+var url_atual = location.search.slice(1);
+if (url_atual == 'error'){
+    swal({
+        title: "Usuário invalido!",
+        text: "Verifique o Usuário e Senha Informado",
+        type: "error",
+        timer: 4000,        
+        allowOutsideClick: true,
+        showCancelButton: true,
+        showConfirmButton: false,
+        allowEscapeKey: true,
+        html: true
+    });
+};
 
 var formularioModal = $("#recuperar_senha")
 
