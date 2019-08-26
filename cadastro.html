@@ -23,6 +23,9 @@
     <!-- switchery -  mascara -->
     <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
 
+    
+    <link rel="stylesheet" href="css/plugins/dataTables/datatables.min.css">
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -129,16 +132,16 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label class="label-control" for="cpf_cadastro">CPF</label>
-                                                    <input type="text" placeholder="Ex. 99.999.999-99" class="form-control cpfCnpj" id="cpf_cadastro" name="cpf_cadastro" required >
+                                                    <label class="label-control" for="cpf_cadastro">CPF/CNPJ</label>
+                                                    <input type="text" placeholder="Ex. 99.999.999-99" class="form-control cpfCnpj" id="cpf_cadastro" name="cpf_cadastro" minlength="14" required >
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label class="label-control" for="tipoPessoa_cadastro">Tipo Pessoa</label>
-                                                        <select class="form-control m-b" id="tipoPessoa_cadastro" name="tipoPessoa_cadastro" required >
-                                                            <option value="">Selecione</option>
+                                                        <select class="form-control m-b" id="tipoPessoa_cadastro" name="tipoPessoa_cadastro"   disabled>
+                                                            <option value="">Tipo de Documento</option>
                                                             <option value="1">Pessoa Fisíca</option>
                                                             <option value="2">Pessoa Juridíca</option>
                                                         </select> 
@@ -147,30 +150,41 @@
                                             
                                             <div class="col-sm-12">
                                                 <div class="form-group" required>
-                                                    <label class="label-control" for="nome_cadastro">Nome</label>
+                                                    <label class="label-control" for="nome_cadastro">Nome/Razão Social</label>
                                                     <input type="text" placeholder="Ex. João da Silva" class="form-control " id="nome_cadastro" name="nome_cadastro" required >
                                                 </div>
                                             </div>
                                             
                                             <div class="col-sm-6">
                                                 <div class="form-group" id="data_1">
-                                                    <label class="label-control" for="dt_nascimento">Nascimento</label>
-                                                    <div class="input-group date" >
+                                                    <label class="label-control" for="dt_nascimento">Nascimento/Abertura</label>
+                                                    <div class="input-group date">
                                                         <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="01/01/1900" >
                                                     </div>
                                                 </div>
                                             </div>
                                             
                                             <div class="col-sm-6">
-                                                <div class="form-group">
+                                                <div class="form-group" id="genero">
                                                     <label class="label-control" for="sexo_cadastro">Gênero</label>
                                                     <select class="form-control m-b"name="sexo_cadastro" id="sexo_cadastro" required>
                                                         <option value="">Selecione</option>
                                                         <option value="1">Masculino</option>
                                                         <option value="2">Feminino</option>
                                                         <option value="3">Indefinido</option>
-                                                    </select>                                                   
+                                                    </select>
                                                 </div>
+                                                <div class="form-group hide" id="porte">
+                                                        <label class="label-control" for="porte_cadastro">Porte</label>
+                                                        <select class="form-control m-b"name="porte_cadastro" id="porte_cadastro" required>
+                                                            <option value="">Selecione</option>
+                                                            <option value="1">MEI</option>
+                                                            <option value="2">Microempresa</option>
+                                                            <option value="3">Pequena</option>
+                                                            <option value="4">Médio</option>
+                                                            <option value="5">Grande</option>
+                                                        </select>                                        
+                                                    </div>
                                             </div>
                                         </div>
                                     </fieldset> <!-- FIM - dados básico -->
@@ -183,14 +197,14 @@
                                             <div class="col-sm-10">
                                                 <div class="form-group">
                                                     <label for="endereco_cadastro" class="label-control">Logradouro</label>
-                                                    <input type="text" placeholder="Ex. Rua: Joao da Silva" id="endereco_cadastro" name="endereco_cadastro" class="form-control" name="logradouro">
+                                                    <input type="text" placeholder="Ex. Rua: Joao da Silva" id="endereco_cadastro" name="endereco_cadastro" class="form-control" minlength="5" required>
                                                 </div>
                                             </div>
                                             
                                             <div class="col-sm-2">
                                                 <div class="form-group">
                                                     <label for="numero_cadastro" class="label-control">Número</label>
-                                                    <input type="text" placeholder="Nº" id="999" name="Ex. numero_cadastro" class="form-control">
+                                                    <input type="text" placeholder="Ex. S/N" id="numero_cadastro" name="numero_cadastro" class="form-control" required>
                                                 </div>
                                             </div>
                                             
@@ -205,8 +219,8 @@
                                             
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label for="numero_cadastro" class="label-control">Bairro</label>
-                                                    <input type="text" id="numero_cadastro" name="numero_cadastro" placeholder="Ex. Centro" class="form-control" name="bairro">
+                                                    <label for="bairro_cadastro" class="label-control">Bairro</label>
+                                                    <input type="text" id="bairro_cadastro" name="bairro_cadastro" placeholder="Ex. Centro" class="form-control" minlength="3" required>
                                                 </div>
                                             </div>
                                             
@@ -214,7 +228,7 @@
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label for="cidade_cadastro" class="label-control">Cidade</label>
-                                                    <input type="text" id="cidade_cadastro" name="cidade_cadastro" placeholder="Ex. São Paulo" class="form-control" name="cidade">
+                                                    <input type="text" id="cidade_cadastro" name="cidade_cadastro" placeholder="Ex. São Paulo" class="form-control" required>
                                                 </div>
                                             </div>
                                             
@@ -222,13 +236,13 @@
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label for="cep_cadastro" class="label-control">CEP</label>
-                                                    <input type="text" id="cep_cadastro" data-mask="99999-999" placeholder="Ex. 00000-000" class="form-control" max-length="9" name="cep_cadastro">
+                                                    <input type="text" id="cep_cadastro" data-mask="99999-999" placeholder="Ex. 00000-000" class="form-control" minlength="9" maxlength="9" name="cep_cadastro" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label for="uf_cadastro" class="label-control">UF</label>
-                                                    <select class="form-control  m-b " id="uf_cadastro" name="uf_cadastro"name="uf">
+                                                    <select class="form-control  m-b " id="uf_cadastro" name="uf_cadastro"required >
                                                         <option value="">Escolha</option>
                                                         <option value="AC">Acre</option>
                                                         <option value="AL">Alagoas</option>
@@ -268,7 +282,7 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label for="telefone1_cadastro">Telefone 1</label>
-                                                    <input type="text" placeholder="Ex. (11) 9999-9999" class="form-control celphones" id="telefone1_cadastro" name="telefone1_cadastro">
+                                                    <input type="text" placeholder="Ex. (11) 9999-9999" class="form-control celphones" id="telefone1_cadastro" name="telefone1_cadastro" minlength="14">
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
@@ -391,22 +405,22 @@
                                         <div class="row">
                                             <div class="hr-line-dashed"></div>
                                             <h3 class="font-bold text-uppercase text-center">Usúario de acesso</h3>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <label for="email_cadastro">Email</label>
-                                                    <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="email_cadastro" name="email_cadastro" required>
+                                                    <label for="emailUser_cadastro">Email</label>
+                                                    <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser_cadastro" name="emailUser_cadastro" required>
                                                 </div>
                                             </div> 
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <label for="Senha_cadastro">Senha</label>
-                                                    <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="eSenha_cadastro" name="Senha_cadastro" required>
+                                                    <label for="senha_cadastro">Senha</label>
+                                                    <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha_cadastro" name="senha_cadastro" required>
                                                 </div>
                                             </div> 
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-4">
                                                 <div class="form-group">
-                                                    <label for="ConfSenha_cadastro">Senha</label>
-                                                    <input type="password" placeholder="Confirme sua senha" class="form-control"  id="ConfSenha" name="ConfSenha" required>
+                                                    <label for="confSenha_cadastro">Confirma Senha</label>
+                                                    <input type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha_cadastro" name="confSenha_cadastro" required>
                                                 </div>
                                             </div> 
 
@@ -453,8 +467,12 @@
     <!-- Steps -->
     <script src="js/plugins/staps/jquery.steps.min.js"></script>
 
-    
+    <!-- swicth chery -->
    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+   
+    <!-- data table -->
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
    
     <!-- Jquery Validate -->
     <script src="js/plugins/validate/jquery.validate.min.js"></script>

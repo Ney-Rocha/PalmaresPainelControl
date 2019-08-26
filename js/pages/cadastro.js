@@ -49,7 +49,7 @@ $("#form").steps({
         cancel: "Cancelar",
         current: "Etapa Atual:",
         pagination: "Paginação",
-        finish: "Fim",
+        finish: "Finalizar",
         next: "Próximo",
         previous: "Anterior",
         loading: "Carregando ..."
@@ -63,13 +63,31 @@ $("#form").steps({
     rules: {
         cpf_cadastro: { required:true},
         nome_cadastro: { required:true},
+        telefone1_cadastro:{required: true},
+        senha_cadastro: {required: true, minlength:4},
+        confSenha_cadastro: {required: true,minlength:4, equalTo: '#senha_cadastro'}
     },
     messages: {
-        cpf_cadastro: { required:'Campo obrigatório'},
-        nome_cadastro: { required:'Campo obrigatório'}
+        cpf_cadastro: { required:'Campo obrigatório', minlength: "Por favor, informe um Documento válido"},
+        nome_cadastro: { required:'Campo obrigatório'},
+        sexo_cadastro:{ required:'Campo obrigatório'},
+        porte_cadastro:{ required:'Campo obrigatório'},
+        endereco_cadastro:{required:'Campo obrigatório', minlength: "Por favor, informe um Endereço válido"},
+        numero_cadastro: {required:'!'},
+        bairro_cadastro:{required:'Campo obrigatório', minlength: "Por favor, informe um Bairro válido"},
+        cidade_cadastro:{required:'Campo obrigatório'},
+        cep_cadastro:{required:'Campo obrigatório', minlength: "Por favor, informe um CEP válido"},
+        uf_cadastro:{required:'Campo obrigatório'},
+        telefone1_cadastro:{required:'Obrigatório pelo meno um telefone de contato',  minlength: "Por favor, informe um telefone fixo ou celular válido"},
+        email_cadastro:{required:'Campo obrigatório', email:'Por favor, informe um endereço de e-mail válido'},
+        emailUser_cadastro:{required:'Campo obrigatório', email:'Por favor, informe um endereço de e-mail válido'},
+        senha_cadastro:{required:'Campo obrigatório', minlength:'Minímo 4 caracteres'},
+        confSenha_cadastro:{required:'Campo obrigatório',  minlength:'Minímo 4 caracteres', equalTo:'Senhas não conferem'}
+        
     }
 }); //FIM - metodo wizard
 
+// campo de validação de data
 $('#data_1 .input-group.date').datepicker({
     todayBtn: "linked",
     keyboardNavigation: false,
@@ -79,11 +97,38 @@ $('#data_1 .input-group.date').datepicker({
     format: "dd/mm/yyyy"
 });
 
+// campo  de acesso sistema / switchery
 var elem = document.querySelector('.js-switch');
-var switchery = new Switchery(elem, { color: '#1AB394' });
+var switchery = new Switchery(elem, { color: '#1AB394', size:'large', jackColor:'#9decff' });
 
 var elem_2 = document.querySelector('.js-switch_2');
 var switchery_2 = new Switchery(elem_2, { color: '#1AB394' });
 
 var elem_3 = document.querySelector('.js-switch_3');
 var switchery_3 = new Switchery(elem_3, { color: '#1AB394' });
+
+
+// recebe o campo documento e atualiza o tipo documento
+var documento = $('#cpf_cadastro').on('blur', function(e){
+    if($('#cpf_cadastro').val().length == 14){
+        $("#tipoPessoa_cadastro").val("1");
+        if($("#porte").hasClass('hide')){
+            $("#genero").removeClass('hide').attr('required');
+        }else{
+            $("#porte").addClass('hide').removeAttr('required');
+            $("#genero").removeClass('hide');
+        }
+        
+
+    }
+    else if($('#cpf_cadastro').val().length >= 15){
+        $("#tipoPessoa_cadastro").val("2");
+        if($("#genero").hasClass('hide')){
+            $("#porte").removeClass('hide').attr('required');
+        }else{
+            $("#genero").addClass('hide').removeAttr('required');
+            $("#porte").removeClass('hide');
+        }
+        
+    }
+})
