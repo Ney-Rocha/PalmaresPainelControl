@@ -1,4 +1,4 @@
-$('#entrar').on('click', function(){
+$('#btn-login').on('click', function(){
     $('#entrar_sistema').validate({
         rules:{
             email_login: {required: true},
@@ -10,6 +10,31 @@ $('#entrar').on('click', function(){
             senha_login: {required: 'Preenchimento obrigatório!', minlength: 'Minímo 4 caracteres'},
         }
     });//fecha seleção do form	
+    
+    $('#btn-login').on('click', function(){
+		
+        var usuarioGuardado = localStorage.getItem('user');
+        var senhaGuardada = localStorage.getItem('pass');
+        
+        if( $('#usuario-login').val() === usuarioGuardado &&
+         $('#senha-login').val() === senhaGuardada ){
+            return true;
+        } else {
+            swal({
+                title: "Usuário invalido!",
+                text: "Verifique o Usuário e Senha Informado",
+                type: "error",
+                timer: 4000,        
+                allowOutsideClick: true,
+                showCancelButton: true,
+                showConfirmButton: false,
+                allowEscapeKey: true,
+                html: true
+                
+            })
+            return false;
+        }	
+    });
 });
 
 var formularioModal = $("#recuperar_senha")
@@ -26,24 +51,14 @@ var validarFormulario = $('#enviar-senha').on('click', function(form){
         submitHandler:function(form) {
             // faz outras coisas por um valor válido
             
-            swal({
-                title: "Email Enviado!",
-                text: "Verifique sua caixa de e-mail para recuperar sua senha!",
-                type: "success",
-                timer: 4000,        
-                allowOutsideClick: true,
-                showCancelButton: false,
-                showConfirmButton: false,
-                allowEscapeKey: true,
-                html: true
-                
-            })
+            
             setTimeout(function(){ form.submit(); }, 4000)
             
         }
     });
     
 });
+
 
 
 

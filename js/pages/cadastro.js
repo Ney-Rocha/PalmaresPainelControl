@@ -1,6 +1,6 @@
 //metodo wizard
 $("#wizard").steps();
-$("#form").steps({
+$("#form-cadastro").steps({
     bodyTag: "fieldset",
     onStepChanging: function (event, currentIndex, newIndex)
     {
@@ -33,7 +33,7 @@ $("#form").steps({
 
         // Desative a validação nos campos que estão desativados.
         // Neste ponto, recomenda-se fazer uma verificação geral (ignorar apenas os campos desativados)
-        form.validate().settings.ignore = ":disabled";
+        form.validate().settings.ignore = ":disabled,:hidden";
 
         // Comece a validação; Evitar o envio do formulário se for falso
         return form.valid();
@@ -132,3 +132,12 @@ var documento = $('#cpf_cadastro').on('blur', function(e){
         
     }
 })
+
+$('#form-cadastro').on('submit', function(){
+    var usuario = $('#form-cadastro #emailUser_cadastro').val();
+    var senha = $('#form-cadastro #senha_cadastro').val();
+    
+    localStorage.setItem('user', usuario);
+    localStorage.setItem('pass', senha);
+    
+});
