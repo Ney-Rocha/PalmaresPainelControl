@@ -14,9 +14,9 @@ $query1 = 'SELECT * FROM USUARIO WHERE ID_EMAIL = '.$email.' AND SENHA_USUARIO =
 $resu = mysqli_query($con,$query1);
 
 if (mysqli_num_rows($resu)>0){
-    echo "<script>alert('logado corretamente');location.href='homeRestrita.html';</script>";
+    echo "<script>location.href='homeRestrita.html';</script>";
 }else{
-    echo "<script>alert('logado incorretamente');location.href='login.html';</script>";
+    echo "<script>location.href='login.html?error';</script>";
 }
 
 mysqli_close($con);
