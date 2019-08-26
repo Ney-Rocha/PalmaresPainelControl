@@ -1,4 +1,4 @@
-$('#btn-login').on('click', function(){
+$('#btn-login').on('click', function(e){
     $('#entrar_sistema').validate({
         rules:{
             email_login: {required: true},
