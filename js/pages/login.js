@@ -51,7 +51,18 @@ var validarFormulario = $('#enviar-senha').on('click', function(form){
         submitHandler:function(form) {
             // faz outras coisas por um valor válido
             
-            
+            swal({
+                title: "E-mail enviado!",
+                text: "Verifique sua caixa de mensagens",
+                type: "success",
+                timer: 4000,        
+                allowOutsideClick: true,
+                showCancelButton: true,
+                showConfirmButton: false,
+                allowEscapeKey: true,
+                html: true
+                
+            })
             setTimeout(function(){ form.submit(); }, 4000)
             
         }
@@ -60,5 +71,7 @@ var validarFormulario = $('#enviar-senha').on('click', function(form){
 });
 
 
-
+$('#btn-faleConsoco').on('click', function(){
+    $(location).attr('href', 'index.html#contact');
+})
 
