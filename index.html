@@ -350,7 +350,7 @@
                 <div class="navy-line"></div>
                 <h1>Fale conosco</h1>
                 <p>Para maiores informações sobre nossos curso, eventos ou mesmo para ser um doador fale consoco preenchendo devidamente os campos abaixo.</p>
-                <form action="" id="fale-conosco">
+                <form action="cadInteressado" id="fale-conosco" method="POST">
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">
@@ -358,21 +358,21 @@
                                     <label for="nome_Interessado" class="label-control pull-left">
                                         Nome
                                     </label>
-                                    <input id="nome_Interessado" type="text"  name="nome_Interessado" class="form-control" required placeholder="Ex: joao da silva">
+                                    <input id="nome_Interessado" name="nome_interessado" type="text"  name="nome_Interessado" class="form-control" required placeholder="Ex: joao da silva">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="telefone_Interessado" class="label-control pull-left ">
                                         Telefone
                                     </label>
-                                    <input type="tel" id="telefone_Interessado" name="telefone_Interessado"  required class="form-control celphones" placeholder="Ex: (99)99999-9999" >
+                                    <input type="tel" name="telefone_interessado" id="telefone_Interessado" name="telefone_Interessado"  required class="form-control celphones" placeholder="Ex: (99)99999-9999" >
                                 </div>
 
                                 <div class="form-group">
                                     <label for="email_Interessado" class="label-control pull-left">
                                         E-mail
                                     </label>
-                                    <input type="email" id="email_Interessado" name="email_Interessado"  required class="form-control" placeholder="Ex: joao@silva.com">
+                                    <input type="email" name="email_interessado" id="email_Interessado" name="email_Interessado"  required class="form-control" placeholder="Ex: joao@silva.com">
                                 </div>
 
                                 <div class="form-group ">
@@ -381,19 +381,19 @@
                                     </h3>
                                     <div class="d-flex-between">
                                         <div class="checkbox checkbox-inline checkbox-info">
-                                            <input type="checkbox" name="interesse" id="interesse_Aula">
-                                            <label for="interesse_Aula"><strong class="text-uppercase">Aulas</strong></label>
+                                            <input type="checkbox" name="interesse" id="interesse_Aula" value="1">
+                                            <label for="interesse_Aula"><strong class="text-uppercase">Aluno</strong></label>
                                         </div>
     
                                         <div class="checkbox checkbox-inline checkbox-info">
-                                            <input type="checkbox" name="interesse" id="interesse_Colaborador">
+                                            <input type="checkbox" name="interesse" id="interesse_Colaborador" value="2">
                                             <label for="interesse_Colaborador">
                                                 <strong class="text-uppercase">Colaboradores</strong>
                                             </label>
                                         </div>
     
                                         <div class="checkbox checkbox-inline checkbox-info">
-                                            <input type="checkbox" name="interesse" id="interesse_Doador">
+                                            <input type="checkbox" name="interesse" id="interesse_Doador" value="3">
                                             <label for="interesse_Doador">
                                                 <strong class="text-uppercase">Doação</strong>
                                             </label>
