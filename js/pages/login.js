@@ -11,24 +11,33 @@ $('#btn-login').on('click', function(e){
         }
     });//fecha seleção do form	
     
+    $.ajax({
+        type : 'POST',
+        url : 'verifLogin.php',
+        data : {email_login : $('#usuario_login').val(), senha_login: $('#senha_login').val()},
+        success : function(result){
+            if (result == 0){
+                window.location.href = 'homeRestrita.html';
+            }
+            if (result == 1){
+                swal({
+                    title: "Usuário invalido!",
+                    text: "Verifique o Usuário e Senha Informado",
+                    type: "error",
+                    timer: 4000,        
+                    allowOutsideClick: true,
+                    showCancelButton: true,
+                    showConfirmButton: false,
+                    allowEscapeKey: true,
+                    html: true
+                });
+            }
+        }
+    })
+    return false;
     
 });
 
-//swal alert para caso não encontre usuario no banco
-var url_atual = location.search.slice(1);
-if (url_atual == 'error'){
-    swal({
-        title: "Usuário invalido!",
-        text: "Verifique o Usuário e Senha Informado",
-        type: "error",
-        timer: 4000,        
-        allowOutsideClick: true,
-        showCancelButton: true,
-        showConfirmButton: false,
-        allowEscapeKey: true,
-        html: true
-    });
-};
 
 var formularioModal = $("#recuperar_senha")
 
