@@ -4,13 +4,15 @@ $('#btn-login').on('click', function(e){
             email_login: {required: true},
             senha_login: {required: true, minlength: 4},
         },
-        messages:{
-            
+        messages:{                
             email_login: {required: 'Preenchimento obrigatório!', email:'O endereço de e-mail deve ter o formato correto "email@site.com'},
             senha_login: {required: 'Preenchimento obrigatório!', minlength: 'Minímo 4 caracteres'},
         }
     });//fecha seleção do form	
-    
+});
+
+$('#entrar_sistema').submit(function(){
+    //validação no banco
     $.ajax({
         type : 'POST',
         url : 'verifLogin.php',
@@ -19,7 +21,7 @@ $('#btn-login').on('click', function(e){
             if (result == 0){
                 window.location.href = 'homeRestrita.html';
             }
-            if (result == 1){
+            if (result == 1 && $('#senha_login').attr('aria-invalid') == 'false'){
                 swal({
                     title: "Usuário invalido!",
                     text: "Verifique o Usuário e Senha Informado",
@@ -35,11 +37,10 @@ $('#btn-login').on('click', function(e){
         }
     })
     return false;
-    
 });
 
 
-var formularioModal = $("#recuperar_senha")
+var formularioModal = $("#recuperar_senha");
 
 var validarFormulario = $('#enviar-senha').on('click', function(form){
     $('#recuperar_senha').validate({
