@@ -1,6 +1,7 @@
 <?php
+include_once("./classes/bd.php");
 
-$con = mysqli_connect('localhost','root','root','RCP') or die ('Não conseguiu conectar');
+$con = new Crud();
 
 $tipo_interessado = implode(',',$_POST['interesse']);
 
