@@ -13,29 +13,36 @@ $('#btn-login').on('click', function(e){
 
 $('#entrar_sistema').submit(function(){
     //validação no banco
-    $.ajax({
-        type : 'POST',
-        url : 'verifLogin.php',
-        data : {email_login : $('#usuario_login').val(), senha_login: $('#senha_login').val()},
-        success : function(result){
-            if (result == 0){
-                window.location.href = 'homeRestrita.html';
+    console.log($('#senha_login').attr('aria-invalid'));
+    var senhaValor = $('#usuario_login').val();
+    var usuarioValor = $('#senha_login').val();
+    if ( usuarioValor == '' || senhaValor == ''){
+        return false;
+    }else if( $('#senha_login').attr('aria-invalid') != 'true' && $('#usuario_login').attr('aria-invalid') != 'true'){
+        $.ajax({
+            type : 'POST',
+            url : 'verifLogin.php',
+            data : {email_login : $('#usuario_login').val(), senha_login: $('#senha_login').val()},
+            success : function(result){
+                if (result == 0){
+                    window.location.href = 'homeRestrita.html';
+                }
+                if (result == 1){
+                    swal({
+                        title: "Usuário invalido!",
+                        text: "Verifique o Usuário e Senha Informado",
+                        type: "error",
+                        timer: 4000,        
+                        allowOutsideClick: true,
+                        showCancelButton: true,
+                        showConfirmButton: false,
+                        allowEscapeKey: true,
+                        html: true
+                    });
+                }
             }
-            if (result == 1 && $('#senha_login').attr('aria-invalid') == 'false'){
-                swal({
-                    title: "Usuário invalido!",
-                    text: "Verifique o Usuário e Senha Informado",
-                    type: "error",
-                    timer: 4000,        
-                    allowOutsideClick: true,
-                    showCancelButton: true,
-                    showConfirmButton: false,
-                    allowEscapeKey: true,
-                    html: true
-                });
-            }
+        })
         }
-    })
     return false;
 });
 
