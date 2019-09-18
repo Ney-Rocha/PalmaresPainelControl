@@ -133,6 +133,10 @@ var documento = $('#cpf_cadastro').on('blur', function(e){
     }
 })
 
+const campos {
+    
+};
+
 $('#form-cadastro').on('submit', function(){
     var usuario = $('#form-cadastro #emailUser_cadastro').val();
     var senha = $('#form-cadastro #senha_cadastro').val();
@@ -141,3 +145,4 @@ $('#form-cadastro').on('submit', function(){
     localStorage.setItem('pass', senha);
     
 });
+
