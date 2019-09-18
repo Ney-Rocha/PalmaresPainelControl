@@ -10,7 +10,7 @@ class bd
 
     public function __construct() 
     {
-        if (isset($this->connection)){
+        if (!isset($this->connection)){
             $this->connection = new mysqli($this->_host, $this->_username, $this->_password, $this->_database);
 
             if(!$this->connection)
@@ -51,13 +51,13 @@ class Crud extends bd
     public function execute($query)
     {
         $result = $this->connection->query($query);
-
+        
         if ($result == false) {
-            echo 'Comando não existe';
+            echo 'Error: cannot execute the command';
             return false;
         } else {
             return true;
-        }
+        }        
     }
     
     public function delete($id, $table) 

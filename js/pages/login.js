@@ -13,7 +13,6 @@ $('#btn-login').on('click', function(e){
 
 $('#entrar_sistema').submit(function(){
     //validação no banco
-    console.log($('#senha_login').attr('aria-invalid'));
     var senhaValor = $('#usuario_login').val();
     var usuarioValor = $('#senha_login').val();
     if ( usuarioValor == '' || senhaValor == ''){
