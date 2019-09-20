@@ -133,16 +133,66 @@ var documento = $('#cpf_cadastro').on('blur', function(e){
     }
 })
 
-const campos {
-    
-};
 
 $('#form-cadastro').on('submit', function(){
-    var usuario = $('#form-cadastro #emailUser_cadastro').val();
-    var senha = $('#form-cadastro #senha_cadastro').val();
+    // var usuario = $('#form-cadastro #emailUser_cadastro').val();
+    // var senha = $('#form-cadastro #senha_cadastro').val();
     
-    localStorage.setItem('user', usuario);
-    localStorage.setItem('pass', senha);
+    // localStorage.setItem('user', usuario);
+    // localStorage.setItem('pass', senha);
+
+    const campos = {
+        cpf_cadastro: $('#cpf_cadastro').val(),
+        tipoPessoa_cadastro: $('#tipoPessoa_cadastro').val(),
+        nome_cadastro: $('#nome_cadastro').val(),
+        nascimento_cadastro: $('#nascimento_cadastro').val(),
+        genero: $('#genero').val(),
+        porte_cadastro: $('#porte_cadastro').val(),
+        endereco_cadastro: $('#endereco_cadastro').val(),
+        numero_cadastro: $('#numero_cadastro').val(),
+        complemento_cadastro: $('#complemento_cadastro').val(),
+        bairro_cadastro: $('#bairro_cadastro').val(),
+        cidade_cadastro: $('#cidade_cadastro').val(),
+        cep_cadastro: $('#cep_cadastro').val(),
+        uf_cadastro: $('#uf_cadastro').val(),
+        telefone1_cadastro: $('#telefone1_cadastro').val(),
+        telefone2_cadastro: $('#telefone2_cadastro').val(),
+        email_cadastro: $('#email_cadastro').val(),
+        aluno_cadastro: $('#aluno_cadastro').val(),
+        colaborador_cadastro: $('#colaborador_cadastro').val(),
+        doador_cadastro: $('#doador_cadastro').val(),
+        modalidade_cadastro: $('#modalidade_cadastro').val(),
+        curso_cadastro: $('#curso_cadastro').val(),
+        graduacao_cadastro: $('#graduacao_cadastro').val(),
+        departamento_cadastro: $('#departamento_cadastro').val(),
+        cargo_cadastro: $('#cargo_cadastro').val(),
+        emailUser_cadastro: $('#emailUser_cadastro').val(),
+        senha_cadastro: $('#senha_cadastro').val(),
+    };
+
+    // $.ajax({
+    //     type : 'POST',
+    //     url : 'cadUsuario.php',
+    //     data : campos,
+    //     success : function(result){
+    //         if (result == 0){
+    //             window.location.href = 'homeRestrita.html';
+    //         }
+    //         if (result == 'erro'){
+    //             swal({
+    //                 title: "Falha ao Cadastrar!",
+    //                 text: "Não foi possivel cadastrar alguma informação",
+    //                 type: "error",
+    //                 timer: 4000,        
+    //                 allowOutsideClick: true,
+    //                 showCancelButton: true,
+    //                 showConfirmButton: false,
+    //                 allowEscapeKey: true,
+    //                 html: true
+    //             });
+    //         }
+    //     }
+    // })
     
 });
 

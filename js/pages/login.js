@@ -41,7 +41,7 @@ $('#entrar_sistema').submit(function(){
                 }
             }
         })
-        }
+    }
     return false;
 });
 

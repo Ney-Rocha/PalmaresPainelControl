@@ -78,5 +78,9 @@ class Crud extends bd
     {
         return $this->connection->real_escape_string($value);
     }
+
+    public function close(){
+        $this->connection->close();
+    }
 }
 ?>
