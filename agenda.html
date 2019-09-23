@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ONG Republica de palmares | Curso </title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/plugins/dataTables/datatables.min.css">
+    
+    <!-- switchery -  mascara -->
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> 
+                            <a href="homerestrita.html">
+                                <h1 class="text-muted">Republica de Palmares</h1>
+                            </a>
+                        </div>
+                        <div class="logo-element">
+                            RCP
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="cadastro.html">Criar</a></li>
+                            <li><a href="cadastroLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="modalidade.html"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="curso.html">Criar</a></li>
+                            <li><a href="cursoLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="doacao.html">Doar</a></li>
+                            <li><a href="doacaoLista.html">Ver</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="agenda.html">Criar</a></li>
+                            <li><a href="listaEvento.html">Editar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>                        
+                    </div>
+                    
+                    <ul class="nav navbar-top-links navbar-right">
+                        
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-sign-out"></i> Sair
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!--parte superior da tela-->
+            
+            <div class="wrapper wrapper-content animated fadeInRight"> 
+                
+                <div class="row m-b-lg">
+                    
+                    <div class="ibox-content panel-body">
+                            
+                        <div class="col-sm-12 m-b-lg">
+                            <h2 class="text-uppercase text-center">
+                                Cadastrar Evento
+                            </h2>
+                        </div>
+
+                        <div class="p-sm">
+                            <div class="" id="inserirCurso" >
+                                <div class="row">
+                                    <!-- <div class="col-sm-12 m-b-md">
+                                        <h3 class="text-center m-t-lg"></h3>
+                                    </div> -->
+                                    <form action="#" id="cadastrar_evento">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="nome_evento" class="label-control">Nome do evento</label>
+                                                <input type="text" class="form-control"name="nome_evento" id="nome_evento" >
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <div class="form-group" id="data_2">
+                                                <label for="data_Evento" class="label-control">Data Evento</label>
+                                                <div class="input-group date">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span> 
+                                                    <input type="text" id="data_Evento" class="form-control" value="15/03/2019" >
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <label for="horaInicio_evento" class="label-control">Horário inicial</label>
+                                            <div class="input-group clockpicker" data-autoclose="true">
+                                                    
+                                                <input type="text" class="form-control" id="horaInicio_evento" value="09:30">
+                                                <span class="input-group-addon">
+                                                    <span class="fa fa-clock-o"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <label for="horaFim_evento" class="label-control">Horário Final</label>
+                                            <div class="input-group clockpicker" data-autoclose="true">
+                                                    
+                                                <input type="text" class="form-control" id="horaFim_evento" value="09:30">
+                                                <span class="input-group-addon">
+                                                    <span class="fa fa-clock-o"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label class="label-control" for="capacidade_evento">Capacidade máxima</label>
+                                                <input type="number" class="form-control m-b"name="capacidade_evento" id="capacidade_evento" placeholder="Qtd máxima"value=""/> 
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="local_evento" class="label-control">Local do evento</label>
+                                                <input type="text" class="form-control"name="local_evento" id="local_evento" >
+                                            </div>
+                                        </div>
+        
+                                       
+        
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label class="label-control" for="descricao_evento">Descrição do Evento</label>
+                                                <textarea name="descricao_evento" class="form-control m-b" id="descricao_evento" placeholder="Descreva o evento" cols="30" rows="5" required></textarea> 
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="col-sm-12">
+                                            
+                                            <div class="text-center m-b-md m-t-sm">
+                                                <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
+
+                                                <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    
+                                </div>
+                            </div> <!--Fim de inserir novo Curso-->
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    República de palmares <strong>2019</strong>.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Associação Cultural &copy;
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    
+    
+     <!-- Switchery -->
+   <script src="js/plugins/switchery/switchery.js"></script>
+    
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <!-- data table -->
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <!-- Clock picker -->
+    <script src="js/plugins/clockpicker/clockpicker.js"></script>
+    
+    <!-- Jquery Validate -->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/jqmask/jquery_mask.js"></script>
+    <script src="js/pages/validator.js"></script>
+    
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $('.clockpicker').clockpicker();
+
+            $('#data_2 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+        })
+    </script>
+        
+</body>
+</html>
+    
+
+

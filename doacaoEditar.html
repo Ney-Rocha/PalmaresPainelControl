@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ONG Republica de palmares | Curso </title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/plugins/dataTables/datatables.min.css">
+    
+    <!-- switchery -  mascara -->
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> 
+                            <a href="homerestrita.html">
+                                <h1 class="text-muted">Republica de Palmares</h1>
+                            </a>
+                        </div>
+                        <div class="logo-element">
+                            RCP
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="cadastro.html">Criar</a></li>
+                            <li><a href="cadastroLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="modalidade.html"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="curso.html">Criar</a></li>
+                            <li><a href="cursoLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="doacao.html">Doar</a></li>
+                            <li><a href="doacaoLista.html">Ver</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="agenda.html">Criar</a></li>
+                            <li><a href="listaEvento.html">Editar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>                        
+                    </div>
+                    
+                    <ul class="nav navbar-top-links navbar-right">
+                        
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-sign-out"></i> Sair
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!--parte superior da tela-->
+            
+            <div class="wrapper wrapper-content animated fadeInRight"> 
+                
+                <div class="row m-b-lg">
+                    
+                    <div class="ibox-content panel-body">
+                            
+                        <div class="col-sm-12 m-b-lg">
+                            <h2 class="text-uppercase text-center">
+                                Doações
+                            </h2>
+                        </div>
+
+                        <div class="p-sm">
+                            <div class="" id="inserirCurso" >
+                                <div class="row">
+                                   
+                                    <form action="#" id="cadastrar_doacao">
+                                        <div class="col-sm-2">
+                                            <div class="form-gropup">
+                                                <label for="id_doacao" class="label-control">ID</label>
+                                                <input type="text" id="id_doacao" class="form-control" value="001">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="doc_Doador" class="label-control">CPF/ CNPJ</label>
+                                                <select data-placeholder="Choose a Country..." id="doc_Doador" name="doc_Doador" class="chosen-select form-control"  tabindex="1" disabled>
+                                                    <option value="">725.234.432-07</option>
+                                                </select>   
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="nome_doador" class="label-control">Doador</label>
+                                                <select data-placeholder="Choose a Country..." id="nome_doador" name="nome_doador" class="chosen-select form-control"  tabindex="1" disabled>
+                                                   
+                                                    <option value="">João Batista da Silva</option>
+                                                </select>   
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-6">
+                                            <div class="form-group" id="data_1">
+                                                <label for="data_Doacao" class="label-control">Data Doação</label>
+                                                <div class="input-group date">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span> 
+                                                    <input type="text" id="data_Doacao" class="form-control" value="15/03/2019" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="valor_Doacao" class="control-label">Valor Doação</label>
+                                                <input type="text" id="valor_Doacao" class="form-control text-right" data-mask="R$ 999,999,999,99" placeholder="R$ 1.500,00" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label class="label-control" for="curso_descricao">Observação</label>
+                                                <textarea name="curso_descricao" class="form-control m-b" id="curso_descricao" placeholder="Observação" cols="30" rows="5" disabled></textarea> 
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="text-center m-b-md m-t-sm">
+                                                <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar" disabled>Cancelar</button>
+
+                                                <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar" disabled>Salvar</button>
+
+                                                <a href="doacaoLista.html" class="btn  btn-success text-uppercase" type="button" value="Adicionar">
+                                                    <span class="fa fa-arrow-left"></span>
+                                                    Voltar
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </form>
+                                    
+                                </div>
+                            </div> <!--Fim do Cadastro-->
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    República de palmares <strong>2019</strong>.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Associação Cultural &copy;
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    
+    
+     <!-- Switchery -->
+   <script src="js/plugins/switchery/switchery.js"></script>
+    
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <!-- data table -->
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <!-- Clock picker -->
+    <script src="js/plugins/clockpicker/clockpicker.js"></script>
+
+     <!-- Chosen -->
+     <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    
+    <!-- Jquery Validate -->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/jqmask/jquery_mask.js"></script>
+    <script src="js/pages/validator.js"></script>
+    
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $('.clockpicker').clockpicker();
+
+            $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+            var config = {
+                '.chosen-select'           : {},
+                '.chosen-select-deselect'  : {allow_single_deselect:true},
+                '.chosen-select-no-single' : {disable_search_threshold:30},
+                '.chosen-select-no-results': {no_results_text:'Não encontrado'},
+                '.chosen-select-width'     : {width:"100%"}
+                }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+            }
+
+        })
+    </script>
+        
+</body>
+</html>
+    
+
+

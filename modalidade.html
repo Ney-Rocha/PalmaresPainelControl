@@ -55,7 +55,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="doacao.html">Doar</a></li>
                             <li><a href="doacaoLista.html">Ver</a></li>
@@ -63,7 +63,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="agenda.html">Criar</a></li>
                             <li><a href="listaEvento.html">Editar</a></li>
@@ -300,7 +300,7 @@
                 ordering: true,
                 info: false,
                 pageLength: 20,
-                lengthChange: false,
+                lengthChange: true,
                 language: {
                     url: '//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json'
                 },
@@ -316,7 +316,7 @@
 
 
             $('#adicionar_modalidade').on("click", function(){
-                $('#inserirModalidade').removeClass('hidden');
+                $('#inserirModalidade').toggleClass('hidden');
                 $('#modalidade_criar').focus();
             });
 
