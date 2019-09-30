@@ -38,14 +38,17 @@
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
-                    <li class="nav-header">
+                     <li class="nav-header">
                         <div class="dropdown profile-element"> 
                             <a href="homerestrita.html">
-                                <h1 class="text-muted">Republica de Palmares</h1>
+                                <!-- <h1 class="text-muted">Republica de Palmares</h1> -->
+                                <div class="content_img">
+                                    <img src="img/Logo_Republica_Cultural.png" alt="" class="logo-responsive">
+                                </div>
                             </a>
                         </div>
                         <div class="logo-element">
-                            RCP
+                            <img src="img/Logo_capoeira_vetorizado_finalizado_normal-01.png" alt="" class="logo-responsive">
                         </div>
                     </li>
                     <li>
@@ -61,9 +64,32 @@
                     
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
+                       <ul class="nav nav-second-level collapse">
                             <li><a href="curso.html">Criar</a></li>
                             <li><a href="cursoLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Alunos</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="aluno.html">Criar</a></li>
+                            <li><a href="alunoLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-institution"></i> <span class="nav-label">Depto/ Cargo</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="depto.html">Criar</a></li>
+                            <li><a href="deptoLista.html">Editar</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-briefcase"></i> <span class="nav-label">Colaborador</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="colaborador.html">Criar</a></li>
+                            <li><a href="colaboradorLista.html">Editar</a></li>
                         </ul>
                     </li>
                     <li>
@@ -302,169 +328,8 @@
     
                                     <h1>Informações de Acessos</h1>
                                     <fieldset>
-                                        <div class="row m-b-md">
-                                            <h3 class="font-bold text-uppercase text-center m-b-md">Permissões de acesso</h3>
-                                            <div class="col-sm-4">
-                                                
-                                                <label for="aluno_cadastro">Aluno</label>
-                                                <input type="checkbox" id="aluno_cadastro" name="aluno_cadastro" class="js-switch" checked />
-                                                
-                                            </div> 
-
-                                            <div class="col-sm-4">
-                                                <label for="colaborador_cadastro">Colaborador</label>
-                                                <input type="checkbox" id="colaborador_cadastro" name="colaborador_cadastro" class="js-switch_2"/>
-                                                
-                                            </div> 
-
-                                            <div class="col-sm-4">
-                                                <label for="doador_cadastro">Doador</label>
-                                                <input type="checkbox" id="doador_cadastro" name="doador_cadastro" class="js-switch_3" checked />
-                                                
-                                            </div> 
-
-                                        </div>
+                                        
                                         <div class="row">
-                                            <div class="hr-line-dashed"></div>
-                                            <h3 class="font-bold text-uppercase text-center">Participação em Cursos</h3>
-
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="label-control" for="modalidade_cadastro">Modalidade</label>
-                                                    <select class="form-control m-b"name="modalidade_cadastro" id="modalidade_cadastro" required>
-                                                        <option value="">Selecione</option>
-                                                        <option value="1">Arte Marcial</option>
-                                                        <option value="2">Artesanato</option>
-                                                        <option value="3">Teatro</option>
-                                                        <option value="4">Música</option>
-                                                    </select>                                                   
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="label-control" for="curso_cadastro">Curso</label>
-                                                    <select class="form-control m-b"name="curso_cadastro" id="curso_cadastro" required>
-                                                        <option value="">Selecione</option>
-                                                        <option value="1">Capoeira</option>
-                                                    </select>                                                   
-                                                </div>
-                                            </div>
-                                            
-
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="label-control" for="graduacao_cadastro">Graduação</label>
-                                                    <select class="form-control m-b"name="graduacao_cadastro" id="graduacao_cadastro" required>
-                                                        <option value="">Selecione</option>
-                                                        <option value="1">Iniciante</option>
-                                                        <option value="1">Cordão Verde</option>
-                                                        <option value="1">Cordão Verde-amarelo</option>
-                                                    </select>                                                   
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12">
-                                                <div class="text-center m-b-md m-t-sm">
-                                                    <button class="btn btn-sm btn-primary" type="button" value="Adicionar">Adicionar</button>
-                                                </div>
-                                            </div>
-    
-
-                                            <!-- tabela de cursos que o individuo pertence -->
-                                            <div class="col-sm-12">
-                                                <div class="table-responsive">
-                                                    <table class="table table-striped table-bordered table-hover lista_cadastros" >
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="text-center">Modalidade</th>
-                                                                <th class="text-center">Curso</th>
-                                                                <th class="text-center">Graduação/Nível</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="gradeX">
-                                                                <td>Artes Marciais</td>
-                                                                <td>
-                                                                    Capoeira
-                                                                </td>
-                                                                <td>
-                                                                    Cardão verde
-                                                                </td>
-                                                            </tr>
-                                                            
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div> <!--Fim da tabela-->  
-                                        </div>
-                                        <div class="row">
-                                            <div class="hr-line-dashed"></div>
-                                            <h3 class="font-bold text-uppercase text-center">Cargo</h3>
-
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label class="label-control" for="departamento_cadastro">Departamento</label>
-                                                    <select class="form-control m-b"name="departamento_cadastro" id="departamento_cadastro" required>
-                                                        <option value="">Selecione</option>
-                                                        <option value="1">Geral</option>
-                                                        <option value="2">Recepção</option>
-                                                        <option value="3">Tesouraria/ Financeiro</option>
-                                                        <option value="4">Aula</option>
-                                                        <option value="5">Diretoria</option>
-                                                    </select>                                                   
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label class="label-control" for="cargo_cadastro">Cargo</label>
-                                                    <select class="form-control m-b"name="cargo_cadastro" id="cargo_cadastro" required>
-                                                        <option value="1">Ajudante Geral</option>
-                                                        <option value="2">Recepcionista</option>
-                                                        <option value="3">Tesoureiro</option>
-                                                        <option value="4">Professor</option>
-                                                        <option value="5">Diretor</option>
-                                                    </select>                                                   
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12">
-                                                <div class="text-center m-b-md m-t-sm">
-                                                    <button class="btn btn-sm btn-primary" type="button" value="Adicionar">Adicionar</button>
-                                                </div>
-                                            </div>
-    
-
-                                            <!-- tabela de cursos que o individuo pertence -->
-                                            <div class="col-sm-12">
-                                                <div class="table-responsive">
-                                                    <table class="table table-striped table-bordered table-hover lista_cadastros" >
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="text-center">Modalidade</th>
-                                                                <th class="text-center">Curso</th>
-                                                                <th class="text-center">Graduação/Nível</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="gradeX">
-                                                                <td>Artes Marciais</td>
-                                                                <td>
-                                                                    Capoeira
-                                                                </td>
-                                                                <td>
-                                                                    Cardão verde
-                                                                </td>
-                                                            </tr>
-                                                            
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div> <!--Fim da tabela-->  
-                                        </div>
-                                        <div class="row">
-                                            <div class="hr-line-dashed"></div>
                                             <h3 class="font-bold text-uppercase text-center">Usúario de acesso</h3>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
@@ -487,15 +352,6 @@
 
                                         </div>
                                     </fieldset>
-    
-                                    <h1>Finalizar</h1>
-                                    <fieldset>
-                                        <h2>Termos e Condições</h2>
-                                        <!-- <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> 
-                                        <label for="acceptTerms">Salvar informações.</label> -->
-                                        
-                                    </fieldset>
-                                    
                                 </form>
                             </div>
 

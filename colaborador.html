@@ -18,6 +18,8 @@
     
     <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
 
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
@@ -27,18 +29,18 @@
     <div id="wrapper">
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
-                <ul class="nav metismenu" id="side-menu">
-                    <li class="nav-header">
+                 <ul class="nav metismenu" id="side-menu">
+                     <li class="nav-header">
                         <div class="dropdown profile-element"> 
                             <a href="homerestrita.html">
                                 <!-- <h1 class="text-muted">Republica de Palmares</h1> -->
                                 <div class="content_img">
-                                    <img src="img/Logo_Republica_Cultural.png" alt="" class="img-responsive">
+                                    <img src="img/Logo_Republica_Cultural.png" alt="" class="logo-responsive">
                                 </div>
                             </a>
                         </div>
                         <div class="logo-element">
-                            <img src="img/Logo_capoeira_vetorizado_finalizado_normal-01.png" alt="" class="img-responsive">
+                            <img src="img/Logo_capoeira_vetorizado_finalizado_normal-01.png" alt="" class="logo-responsive">
                         </div>
                     </li>
                     <li>
@@ -54,7 +56,7 @@
                     
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
+                       <ul class="nav nav-second-level collapse">
                             <li><a href="curso.html">Criar</a></li>
                             <li><a href="cursoLista.html">Editar</a></li>
                         </ul>
@@ -66,7 +68,7 @@
                             <li><a href="alunoLista.html">Editar</a></li>
                         </ul>
                     </li>
-                    
+
                     <li>
                         <a href="#"><i class="fa fa-institution"></i> <span class="nav-label">Depto/ Cargo</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
@@ -127,100 +129,98 @@
                             
                         <div class="col-sm-12 m-b-lg">
                             <h2 class="text-uppercase text-center">
-                                Editar Evento
+                                Cadastrar Colaborador
                             </h2>
                         </div>
 
                         <div class="p-sm">
-                            <div class="" id="inserirCurso" >
-                                <div class="row">
-                                    <!-- <div class="col-sm-12 m-b-md">
-                                        <h3 class="text-center m-t-lg"></h3>
-                                    </div> -->
-                                    <form action="#" id="cadastrar_evento">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label for="nome_evento" class="label-control">Nome do evento</label>
-                                                <input type="text" class="form-control"name="nome_evento" id="nome_evento" >
-                                            </div>
+                           <div class="row">
+                                   
+                                <form action="#" id="cadastrar_Colaborador">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="dpto_colab" class="label-control">Departamento</label>
+                                            <select data-placeholder="Selecione a Departamento..." id="dpto_colab" name="dpto_colab" class="chosen-select form-control"  tabindex="1">
+                                                <option value="">Selecione..</option>
+                                                <option value="1">Recepção</option>
+                                                <option value="2">Aulas</option>
+                                                <option value="3">Financeiro</option>
+                                                <option value="4">Depto Geral</option>
+                                            </select>   
                                         </div>
+                                    </div>
 
-                                        <div class="col-sm-3">
-                                            <div class="form-group" id="data_2">
-                                                <label for="data_Evento" class="label-control">Data Evento</label>
-                                                <div class="input-group date">
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-calendar"></i>
-                                                    </span> 
-                                                    <input type="text" id="data_Evento" class="form-control" value="15/03/2019" >
-                                                </div>
-                                            </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="depto_cargo" class="label-control">Cargo</label>
+                                            <select data-placeholder="Selecione o Cargo..." id="depto_cargo" name="depto_cargo" class="chosen-select form-control"  tabindex="1">
+                                                <option value="">Selecione..</option>
+                                                <option value="1">Recepicionista</option>
+                                                <option value="2">Professor(a)</option>
+                                                <option value="3">Tesoureiro</option>
+                                                <option value="4">Ajudante geral</option>
+                                            </select>   
                                         </div>
+                                    </div>
 
-                                        <div class="col-sm-3">
-                                            <label for="horaInicio_evento" class="label-control">Horário inicial</label>
-                                            <div class="input-group clockpicker" data-autoclose="true">
-                                                    
-                                                <input type="text" class="form-control" id="horaInicio_evento" value="09:30">
+                                    <div class="col-sm-4">
+                                        <div class="form-group" id="data_1">
+                                            <label for="data_matricula" class="label-control">Data de entrada</label>
+                                            <div class="input-group date">
                                                 <span class="input-group-addon">
-                                                    <span class="fa fa-clock-o"></span>
-                                                </span>
+                                                    <i class="fa fa-calendar"></i>
+                                                </span> 
+                                                <input type="text" id="data_matricula" class="form-control" value="03/09/2019">
                                             </div>
                                         </div>
+                                    </div>     
 
-                                        <div class="col-sm-3">
-                                            <label for="horaFim_evento" class="label-control">Horário Final</label>
-                                            <div class="input-group clockpicker" data-autoclose="true">
-                                                    
-                                                <input type="text" class="form-control" id="horaFim_evento" value="09:30">
-                                                <span class="input-group-addon">
-                                                    <span class="fa fa-clock-o"></span>
-                                                </span>
-                                            </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="doc_colab" class="label-control">CPF/ CNPJ</label>
+                                            <select data-placeholder="Selecione o documento..." id="doc_colab" name="doc_colab" class="chosen-select form-control"  tabindex="1">
+                                                <option value="">Selecione..</option>
+                                                <option value="1">725.234.432-07</option>
+                                                <option value="2">010.234.098-98</option>
+                                                <option value="3">456.123.654.00</option>
+                                                <option value="4">123.321.123-32</option>
+                                                <option value="5">010.101.123-01</option>
+                                            </select>   
                                         </div>
-
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label class="label-control" for="capacidade_evento">Capacidade máxima</label>
-                                                <input type="number" class="form-control m-b"name="capacidade_evento" id="capacidade_evento" placeholder="Qtd máxima"value=""/> 
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label for="local_evento" class="label-control">Local do evento</label>
-                                                <input type="text" class="form-control"name="local_evento" id="local_evento" >
-                                            </div>
-                                        </div>
-        
-                                       
-        
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label class="label-control" for="descricao_evento">Descrição do Evento</label>
-                                                <textarea name="descricao_evento" class="form-control m-b" id="descricao_evento" placeholder="Descreva o evento" cols="30" rows="5" required></textarea> 
-                                            </div>
-                                        </div>
-
-                                        
-                                        <div class="col-sm-12">
-                                            
-                                            <div class="text-center m-b-md m-t-sm">
-                                                <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
-
-                                                <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
-
-                                                <a href="listaEvento.html" class="btn  btn-success text-uppercase" type="button" value="Adicionar">
-                                                    <span class="fa fa-arrow-left"></span>
-                                                    Voltar
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                    </form>
+                                    </div>
                                     
-                                </div>
-                            </div> <!--Fim de inserir novo Curso-->
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <label for="nome_colab" class="label-control">Colaboador</label>
+                                            <select data-placeholder="Selecione o anluno..." id="nome_colab" name="nome_colab" class="chosen-select form-control"  tabindex="1">
+                                                <option value="">Selecione..</option>
+                                                <option value="1">João Batista da Silva</option>
+                                                <option value="2">Maria Aparecida dos Santos</option>
+                                                <option value="3">Claudio Marques Soares</option>
+                                                <option value="4">Alan Rocha</option>
+                                                <option value="5">Jorge Albano</option>
+                                            </select>   
+                                        </div>
+                                    </div>                         
+                                    
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label class="label-control" for="curso_descricao">Observação</label>
+                                            <textarea name="curso_descricao" class="form-control m-b" id="curso_descricao" placeholder="Observação" cols="30" rows="5" required></textarea> 
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="text-center m-b-md m-t-sm">
+                                            <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
+
+                                            <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                                
+                            </div>
                         </div>
                     </div>                    
                 </div>
@@ -248,10 +248,8 @@
     
     <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
 
-    <!-- data table -->
-    <script src="js/plugins/dataTables/datatables.min.js"></script>
-    <!-- Clock picker -->
-    <script src="js/plugins/clockpicker/clockpicker.js"></script>
+     <!-- Chosen -->
+     <script src="js/plugins/chosen/chosen.jquery.js"></script>
     
     <!-- Jquery Validate -->
     <script src="js/plugins/validate/jquery.validate.min.js"></script>
@@ -264,16 +262,25 @@
     
     <script>
         $(document).ready(function(){
-            
-            $('.clockpicker').clockpicker();
 
-            $('#data_2 .input-group.date').datepicker({
+            $('#data_1 .input-group.date').datepicker({
                 todayBtn: "linked",
                 keyboardNavigation: false,
                 forceParse: false,
                 calendarWeeks: true,
                 autoclose: true
             });
+
+            var config = {
+                '.chosen-select'           : {},
+                '.chosen-select-deselect'  : {allow_single_deselect:true},
+                '.chosen-select-no-single' : {disable_search_threshold:30},
+                '.chosen-select-no-results': {no_results_text:'Não encontrado'},
+                '.chosen-select-width'     : {width:"100%"},
+                }
+            for (var selector in config) {
+                $(selector).chosen(config[selector]);
+            }
 
         })
     </script>

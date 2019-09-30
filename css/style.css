@@ -160,8 +160,9 @@ h5 {
   font-size: 12px;
 }
 .nav-header {
-  padding: 33px 25px;
-  background: url("patterns/header-profile.png") no-repeat;
+  padding: 10px 35px;
+  /* background: url("patterns/header-profile.png") no-repeat; */
+  background-color: #fff;
 }
 .pace-done .nav-header {
   transition: all 0.4s;
@@ -300,7 +301,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
   font-weight: 600;
   color: white;
   display: none;
-  padding: 18px 0;
+  padding: 2px 13px;
 }
 .pace-done .navbar-static-side,
 .pace-done .nav-header,
@@ -381,7 +382,7 @@ body.canvas-menu .logo-element {
 }
 body.mini-navbar .nav-header {
   padding: 0;
-  background-color: #1ab394;
+  background-color: #fff;
 }
 body.canvas-menu .nav-header {
   padding: 33px 25px;
@@ -8235,4 +8236,10 @@ body.md-skin {
   display: flex;
   justify-content: space-between;
 
+}
+
+.logo-responsive{
+  width: 100%;
+  height: auto;
+  max-height: 100px;
 }
